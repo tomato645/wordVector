@@ -1,21 +1,17 @@
 import streamlit as st
 import gensim
-from PIL import Image
 
 
 
 def do(word, count):
   word,"の類語を考えています🧐"
-  
-  image = Image.open('test.png')
-  st.image(image, caption='Sunrise by the mountains')
 
-  try:
-    model = gensim.models.keyedvectors.load_word2vec_format("model.vec")
-    answer = model.most_similar(positive = word)
-  except:
-    st.error('学習されていない単語です')
-    st.stop()
+#   try:
+  model = gensim.models.keyedvectors.load_word2vec_format("model.vec")
+  answer = model.most_similar(positive = word)
+# #   except:
+#     st.error('学習されていない単語です')
+#     st.stop()
 
   st.balloons()
 
