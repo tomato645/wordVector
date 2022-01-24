@@ -7,7 +7,7 @@ def do(word, count):
   word,"の類語を考えています🧐"
 
   try:
-    model = gensim.models.keyedvectors.load_word2vec_format("./model.vec")
+    model = gensim.models.keyedvectors.load_word2vec_format("model.vec")
     answer = model.most_similar(positive = word)
   except:
     st.error('学習されていない単語です')
