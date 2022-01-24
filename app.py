@@ -1,6 +1,6 @@
 import streamlit as st
 import gensim
-form PIL import Image
+from PIL import Image
 
 
 
