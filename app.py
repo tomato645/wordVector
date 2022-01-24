@@ -1,10 +1,14 @@
 import streamlit as st
 import gensim
+form PIL import Image
 
 
 
 def do(word, count):
   word,"の類語を考えています🧐"
+  
+  image = Image.open('test.png')
+  st.image(image, caption='Sunrise by the mountains')
 
   try:
     model = gensim.models.keyedvectors.load_word2vec_format("model.vec")
